@@ -16,5 +16,32 @@ namespace Inventory
         {
             InitializeComponent();
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            DialogResult Exit;
+            Exit = MessageBox.Show("Save file and exit", "Inventory System", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (Exit == DialogResult.Yes)
+            {
+                Application.Exit();
+
+            }
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
