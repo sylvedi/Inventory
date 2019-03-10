@@ -8,14 +8,14 @@ namespace Inventory
 {
     class PhoneInventory
     {
-        private string id;
-        private string model;
-        private string capacity;
-        private string networks;
-        private string quantity;
-        private string price;
-        private string suppliers;
-        private string buyers;
+        public string id;
+        public string model;
+        public string capacity;
+        public string networks;
+        public string quantity;
+        public string price;
+        public string suppliers;
+        public string buyers;
 
         public PhoneInventory(string id, string model, string capacity, string networks, string quantity, string price, string suppliers, string buyers)
         {
@@ -46,6 +46,7 @@ namespace Inventory
         }
 
         
+       
 
         
 

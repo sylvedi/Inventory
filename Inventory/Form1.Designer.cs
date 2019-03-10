@@ -53,12 +53,12 @@
             this.iphone = new System.Windows.Forms.RadioButton();
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.sQuantity = new System.Windows.Forms.TextBox();
-            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.listBoxGrouper = new System.Windows.Forms.ListBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.exit = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.search = new System.Windows.Forms.Button();
-            this.newFile = new System.Windows.Forms.Button();
+            this.Edit_File = new System.Windows.Forms.Button();
             this.listOutPut = new System.Windows.Forms.ListBox();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -85,6 +85,7 @@
             this.deleteFile.TabIndex = 2;
             this.deleteFile.Text = "Delete Iterm";
             this.deleteFile.UseVisualStyleBackColor = true;
+            this.deleteFile.Click += new System.EventHandler(this.deleteFile_Click);
             // 
             // panel2
             // 
@@ -116,7 +117,7 @@
             this.groupBox1.Controls.Add(this.iphone);
             this.groupBox1.Controls.Add(this.dateTimePicker);
             this.groupBox1.Controls.Add(this.sQuantity);
-            this.groupBox1.Controls.Add(this.listBox2);
+            this.groupBox1.Controls.Add(this.listBoxGrouper);
             this.groupBox1.Location = new System.Drawing.Point(22, 23);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1102, 460);
@@ -355,14 +356,14 @@
             this.sQuantity.Size = new System.Drawing.Size(175, 26);
             this.sQuantity.TabIndex = 4;
             // 
-            // listBox2
+            // listBoxGrouper
             // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 20;
-            this.listBox2.Location = new System.Drawing.Point(6, 31);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(1092, 424);
-            this.listBox2.TabIndex = 0;
+            this.listBoxGrouper.FormattingEnabled = true;
+            this.listBoxGrouper.ItemHeight = 20;
+            this.listBoxGrouper.Location = new System.Drawing.Point(6, 31);
+            this.listBoxGrouper.Name = "listBoxGrouper";
+            this.listBoxGrouper.Size = new System.Drawing.Size(1092, 424);
+            this.listBoxGrouper.TabIndex = 0;
             // 
             // pictureBox1
             // 
@@ -401,15 +402,16 @@
             this.search.Text = "Search";
             this.search.UseVisualStyleBackColor = true;
             // 
-            // newFile
+            // Edit_File
             // 
-            this.newFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.newFile.Location = new System.Drawing.Point(1660, 578);
-            this.newFile.Name = "newFile";
-            this.newFile.Size = new System.Drawing.Size(196, 68);
-            this.newFile.TabIndex = 8;
-            this.newFile.Text = "New ";
-            this.newFile.UseVisualStyleBackColor = true;
+            this.Edit_File.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Edit_File.Location = new System.Drawing.Point(1660, 578);
+            this.Edit_File.Name = "Edit_File";
+            this.Edit_File.Size = new System.Drawing.Size(196, 68);
+            this.Edit_File.TabIndex = 8;
+            this.Edit_File.Text = "Edit";
+            this.Edit_File.UseVisualStyleBackColor = true;
+            this.Edit_File.Click += new System.EventHandler(this.newFile_Click);
             // 
             // listOutPut
             // 
@@ -417,8 +419,9 @@
             this.listOutPut.ItemHeight = 20;
             this.listOutPut.Location = new System.Drawing.Point(170, 698);
             this.listOutPut.Name = "listOutPut";
-            this.listOutPut.Size = new System.Drawing.Size(2030, 404);
+            this.listOutPut.Size = new System.Drawing.Size(976, 404);
             this.listOutPut.TabIndex = 9;
+            this.listOutPut.SelectedIndexChanged += new System.EventHandler(this.listOutPut_SelectedIndexChanged);
             // 
             // Form1
             // 
@@ -427,7 +430,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(2392, 1129);
             this.Controls.Add(this.listOutPut);
-            this.Controls.Add(this.newFile);
+            this.Controls.Add(this.Edit_File);
             this.Controls.Add(this.search);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.exit);
@@ -454,7 +457,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DateTimePicker dateTimePicker;
         private System.Windows.Forms.TextBox sQuantity;
-        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.ListBox listBoxGrouper;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.RadioButton blackberry;
         private System.Windows.Forms.RadioButton samsung;
@@ -477,7 +480,7 @@
         private System.Windows.Forms.Button exit;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button search;
-        private System.Windows.Forms.Button newFile;
+        private System.Windows.Forms.Button Edit_File;
         private System.Windows.Forms.ListBox listOutPut;
     }
 }

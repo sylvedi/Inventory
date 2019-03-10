@@ -16,7 +16,7 @@ namespace Inventory
     public partial class Form1 : Form
     {
         int idCounter = 0;
-
+        private List<PhoneInventory> itemsList = new List<PhoneInventory>();
 
         //string orderList = "{0, -40} {1, -30}{2, -30}{3, -40}{4, -50}{5, -60}{6, -80}{7, -100}";
 
@@ -64,7 +64,7 @@ namespace Inventory
                 string capacity = memory.Text;
                 string networks = network.Text;
                 string Quantity = sQuantity.Text;
-                //string dateTimePick = dataTimePicker.Text;
+                //string dateTimePick = dataTimePicker.Value.Text;
                 string Price = sPrice.Text;
                 string suppliers = supplier.Text;
                 string buyers = buyer.Text;
@@ -95,7 +95,43 @@ namespace Inventory
         private void Form1_Load(object sender, EventArgs e)
         {
             
-            //listOutPut.Items.Add(string.Format(orderList, "Model", "Capacity", "Carrier", "Quantity", "Date", "Price", "Supplier", "Buyer"));
+           
+        }
+
+        private void newFile_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                int s = listOutPut.SelectedIndex;
+
+                //listOutPut.Items.RemoveAt(s);
+                //listOutPut.Items.Insert(s, sModel.Text, memory.Text);
+                
+                sModel.Text = itemsList[s].model;
+                memory.Text = itemsList[s].capacity;
+                network.Text = itemsList[s].networks;
+                sQuantity.Text = itemsList[s].quantity;
+                sPrice.Text = itemsList[s].price;
+                supplier.Text = itemsList[s].suppliers;
+                buyer.Text = itemsList[s].buyers;
+
+            }
+            catch
+            {
+
+            }
+
+        }
+
+        private void listOutPut_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void deleteFile_Click(object sender, EventArgs e)
+        {
+            listOutPut.Items.Clear();
         }
     }
 }
