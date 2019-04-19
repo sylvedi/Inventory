@@ -29,19 +29,19 @@ namespace Inventory
             this.buyers = buyers;
         }
 
-        //public string sModel { get; set; }
-        //public string memory { get; set; }
-        //public string network { get; set; }
-        //public string sQuantity { get; set; }
-        //public string dateTimePicker { get; set; }
-        //public string sPrice { get; set; }
-        //public string supplier { get; set; }
-        //public string buyer { get; set; }
-
+        public string sModel { get; set; }
+        public string memory { get; set; }
+        public string network { get; set; }
+        public string sQuantity { get; set; }
+        public string dateTimePicker { get; set; }
+        public string sPrice { get; set; }//double
+        public string supplier { get; set; }
+        public string buyer { get; set; }
+        public string prodId { get; set; }
 
     public string ToString()
         {
-            string newString = this.id + "  " +this.model + "          " + this.capacity + "          " + networks + "          " + quantity + "          " + price + "      " + suppliers + "     " + buyers;
+            string newString = this.id + "  " + this.model + "          " + this.capacity + "          " + networks + "          " + quantity + "          " + price + "      " + suppliers + "     " + buyers;
                 return newString;
         }
 
@@ -53,3 +53,4 @@ namespace Inventory
     }
     
 }
+

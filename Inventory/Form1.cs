@@ -15,10 +15,11 @@ namespace Inventory
     //3/7/2019
     public partial class Form1 : Form
     {
+        
         int idCounter = 0;
         private List<PhoneInventory> itemsList = new List<PhoneInventory>();
 
-        //string orderList = "{0, -40} {1, -30}{2, -30}{3, -40}{4, -50}{5, -60}{6, -80}{7, -100}";
+        
 
         public Form1()
         {
@@ -95,6 +96,7 @@ namespace Inventory
         private void Form1_Load(object sender, EventArgs e)
         {
             
+
            
         }
 
@@ -131,7 +133,22 @@ namespace Inventory
 
         private void deleteFile_Click(object sender, EventArgs e)
         {
-            listOutPut.Items.Clear();
+            listOutPut.Items.RemoveAt(listOutPut.SelectedIndex);
+        }
+
+        private void sModel_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void search_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
